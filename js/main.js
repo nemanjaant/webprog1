@@ -28,11 +28,11 @@ window.onload = function () {
 
   /*****/
 
-
+  var path = window.location.pathname;
   
   /* index pocetak */
 
-  if (window.location.href.includes("index.html")) != -1) {
+  if (path.includes("#")) {
 
 
     /* Ispis i obrada forme */
