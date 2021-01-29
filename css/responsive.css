@@ -599,6 +599,20 @@
 .contact_form {
     margin: 0;
 }
+.contact_section {
+
+        background-size: 100% auto;
+        background-position: center center;
+    
+    }
+    #dugmeSalji {
+        width: 100%;
+    }
+	
+	#formElements {
+		width:80%;
+		margin: 0 auto;
+	}
 
 }
  
