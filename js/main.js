@@ -150,11 +150,7 @@ window.onload = function () {
   }
   /* index kraj */
 
-  /* about */
-
-  if (path.indexOf("about.html") != -1) {}
-
-
+  
 
   /* FUNKCIJE */
 
