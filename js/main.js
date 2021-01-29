@@ -32,7 +32,7 @@ window.onload = function () {
   
   /* index pocetak */
 
-  if (path.includes("#")) {
+  if (path.includes("webprog1")) {
 
 
     /* Ispis i obrada forme */
