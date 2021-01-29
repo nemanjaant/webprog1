@@ -33,7 +33,7 @@ window.onload = function () {
 
   /* index pocetak */
 
-  if (path.indexOf("index.html") != -1 || path == '/webprog1/') {
+  
 
     
     /* Ispis i obrada forme */
@@ -148,7 +148,7 @@ window.onload = function () {
     showSlides();
     
     
-  }
+ 
   /* index kraj */
 
   /* about */
