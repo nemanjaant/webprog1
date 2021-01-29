@@ -29,11 +29,10 @@ window.onload = function () {
   /*****/
 
 
-  var path = window.location.pathname;
-
+  
   /* index pocetak */
 
-  if (path.indexOf("/webprog1/#") != -1) {
+  if (window.location.href.includes("index.html")) != -1) {
 
 
     /* Ispis i obrada forme */
