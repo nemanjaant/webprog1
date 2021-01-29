@@ -33,7 +33,7 @@ window.onload = function () {
 
   /* index pocetak */
 
-  if (path.indexOf("index.html") != -1 || path == 'webprog1/#') {
+  if (path.indexOf("/webprog1/") != -1 || path == '/') {
 
 
     /* Ispis i obrada forme */
