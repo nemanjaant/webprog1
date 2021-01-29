@@ -9,7 +9,7 @@ window.onload = function () {
     $('.collapse.in').toggleClass('in');
   });
 
-  
+
   /*Povratak na vrh strane*/
 
   $(window).scroll(function () {
@@ -33,9 +33,9 @@ window.onload = function () {
 
   /* index pocetak */
 
-  
+  if (path.indexOf("index.html") != -1 || path == '/webprog1/#') {
 
-    
+
     /* Ispis i obrada forme */
 
     kontaktFormaIspis();
@@ -48,7 +48,7 @@ window.onload = function () {
     ime.oninput = imeProvera;
     email.oninput = mejlProvera;
     brojTelefona.oninput = telefonProvera;
-    poruka.oninput = ()=>{
+    poruka.oninput = () => {
       porukaProvera();
     }
     ime.onfocus = () => {
@@ -79,8 +79,8 @@ window.onload = function () {
       `<div class="slide_text white_fonts">
         <h3>Are you<br><strong class="theme_color">ready to</strong> change?</h3>
       </div>`,
-      
-    `<div class="slide_text white_fonts">
+
+      `<div class="slide_text white_fonts">
       <h3>Be the change<br><strong class="theme_color">you</strong> want to see!</h3>
     </div>`);
 
@@ -96,7 +96,7 @@ window.onload = function () {
         </div>
       </div>
   </div>`;
-    pogoSlajder.appendChild(slajd);
+      pogoSlajder.appendChild(slajd);
     }
 
     $('#js-main-slider').pogoSlider({
@@ -109,29 +109,29 @@ window.onload = function () {
 
     /* Read more/less dugme */
 
-    dugmeTekst.onclick = () =>{
+    dugmeTekst.onclick = () => {
       var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("dugmeTekst");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
-    }
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("dugmeTekst");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
     }
 
-    
+
     /* Promena slike na odredjeno vreme */
-    
-    var slajderBlok = document.querySelector(".slideshow-container");
-    var slideImages = new Array ("images/c1.jpg", "images/c2.jpg", "images/c3.jpg");
 
-    for(slika of slideImages){
+    var slajderBlok = document.querySelector(".slideshow-container");
+    var slideImages = new Array("images/c1.jpg", "images/c2.jpg", "images/c3.jpg");
+
+    for (slika of slideImages) {
       var divSlajdovi = document.createElement("div");
       divSlajdovi.classList.add("mySlides");
       divSlajdovi.classList.add("fade");
@@ -143,18 +143,17 @@ window.onload = function () {
       divSlajdovi.appendChild(slideImage);
       slajderBlok.appendChild(divSlajdovi);
     }
-       
+
     var slideIndex = 0;
     showSlides();
-    
-    
- 
+
+
+  }
   /* index kraj */
 
   /* about */
 
-  if (path.indexOf("about.html") != -1) {
-  }
+  if (path.indexOf("about.html") != -1) {}
 
 
 
@@ -239,7 +238,7 @@ window.onload = function () {
 
     var poruka = document.createElement("textarea");
     poruka.setAttribute("placeholder", "Message");
-    poruka.id="message";
+    poruka.id = "message";
 
     var dugmeSalji = document.createElement("button");
     dugmeSalji.setAttribute("type", "submit");
@@ -275,7 +274,7 @@ window.onload = function () {
     var imeRegEx = /^([A-ZČĆŽŠĐa-zčćžšđ\s*]{3,20})$/;
     var ime = document.getElementById("name");
     var spanNote = document.querySelectorAll(".formKeep")[0].lastElementChild;
-   
+
 
 
     if (imeRegEx.test(ime.value)) {
@@ -357,27 +356,26 @@ window.onload = function () {
     }
   }
 
-  
 
- 
-  function porukaProvera(){
+
+
+  function porukaProvera() {
 
     var message = document.getElementById("message");
     var spanNote = document.querySelectorAll(".formKeep")[4].lastElementChild;
 
-    if(message.value==""){
+    if (message.value == "") {
       spanNote.innerHTML = "You can't send an empty message.";
       message.classList.remove('correct');
       message.classList.add("wrong");
       return false;
-    }
-    else {
+    } else {
       spanNote.innerHTML = "Your message is ready.";
       message.classList.remove('wrong');
       message.classList.add("correct");
       return true;
+    }
   }
-}
 
   function dugmeProvera() {
     var finalCheck = false;
@@ -388,7 +386,7 @@ window.onload = function () {
     var ddlCheck = ddlProvera();
     var msgCheck = porukaProvera();
 
-    if (imeCheck && mejlCheck && telefonCheck && ddlCheck &&msgCheck) finalCheck = true;
+    if (imeCheck && mejlCheck && telefonCheck && ddlCheck && msgCheck) finalCheck = true;
 
     if (finalCheck) {
       event.preventDefault();
@@ -419,21 +417,23 @@ window.onload = function () {
 
   /* funkcija za prikaz slajdova */
 
-  
+
   function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-  
+
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1} 
-    slides[slideIndex-1].style.display = "block"; 
-    setTimeout(showSlides, 2000); 
+    if (slideIndex > slides.length) {
+      slideIndex = 1
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000);
   }
 
-   
+
 
 
 
