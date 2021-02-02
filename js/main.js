@@ -88,7 +88,7 @@ window.onload = function () {
     for (let i = 0; i < slajderSadrzaj.length; i++) {
       var slajd = document.createElement("div");
       slajd.classList.add("pogoSlider-slide");
-      slajd.style.backgroundImage = `url(../images/pogo${i+1}.jpg)`;
+      slajd.style.backgroundImage = `url(images/pogo${i+1}.jpg)`;
       slajd.innerHTML = `
     <div class="container">
       <div class="row">
