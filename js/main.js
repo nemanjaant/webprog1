@@ -3,6 +3,7 @@ window.onload = function () {
   /******* za sve strane *******/
 
   hederIspis();
+  futerIspis();
 
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar, #content').toggleClass('active');
@@ -28,11 +29,12 @@ window.onload = function () {
 
   /*****/
 
+
   var path = window.location.pathname;
   
   /* index pocetak */
 
-  if (path.includes("webprog1")) {
+  if (path.indexOf("index.html") != -1 || path == '/') {
 
 
     /* Ispis i obrada forme */
@@ -76,17 +78,17 @@ window.onload = function () {
     var pogoSlajder = document.getElementById("js-main-slider");
     var slajderSadrzaj = new Array(
       `<div class="slide_text white_fonts">
-        <h3>Are you<br><strong class="theme_color">ready to</strong> change?</h3>
+        <h1>Are you <strong class="theme_color">ready to</strong> change?</h1>
       </div>`,
 
       `<div class="slide_text white_fonts">
-      <h3>Be the change<br><strong class="theme_color">you</strong> want to see!</h3>
+      <h1>Be the change <strong class="theme_color">you</strong> want to see!</h1>
     </div>`);
 
     for (let i = 0; i < slajderSadrzaj.length; i++) {
       var slajd = document.createElement("div");
       slajd.classList.add("pogoSlider-slide");
-      slajd.style.backgroundImage = `url(images/pogo${i+1}.jpg)`;
+      slajd.style.backgroundImage = `url(../images/pogo${i+1}.jpg)`;
       slajd.innerHTML = `
     <div class="container">
       <div class="row">
@@ -124,33 +126,24 @@ window.onload = function () {
       }
     }
 
+   
 
-    /* Promena slike na odredjeno vreme */
 
-    var slajderBlok = document.querySelector(".slideshow-container");
-    var slideImages = new Array("images/c1.jpg", "images/c2.jpg", "images/c3.jpg");
+    /* Prikaz bloka sa tekstom i slikom */
 
-    for (slika of slideImages) {
-      var divSlajdovi = document.createElement("div");
-      divSlajdovi.classList.add("mySlides");
-      divSlajdovi.classList.add("fade");
-      var slideImage = document.createElement("img");
+    var blok = document.querySelector(".imgcontainer");
+
+    var slideImage = document.createElement("img");
       slideImage.classList.add("img-fluid");
-      slideImage.src = slika;
-      slideImages.alt = "Slide image";
-
-      divSlajdovi.appendChild(slideImage);
-      slajderBlok.appendChild(divSlajdovi);
-    }
-
-    var slideIndex = 0;
-    showSlides();
+      slideImage.src = "images/c3.jpg";
+      slideImage.alt = "Slide image";
+      blok.appendChild(slideImage);
 
 
   }
   /* index kraj */
 
-  
+
 
   /* FUNKCIJE */
 
@@ -186,6 +179,45 @@ window.onload = function () {
 
 
 
+
+
+  }
+
+  function futerIspis(){
+
+    /*prva kolona*/
+    var divImg = document.createElement("div");
+    $(divImg).addClass("full");
+    $(divImg).html(`<img class="img-responsive" src="images/main_logo.png"
+    alt="site logo" />`);
+    $('#rowOne').append(divImg);
+
+    var divTxt = document.createElement("div");
+    $(divTxt)
+    .addClass("full white_fonts")
+    .html(`<p>RunFitness offers a large selection of group trainings, as well as a constantly present, friendly staff, which is always available. Fitness instructors and trainers RunFitness are professionals with many years of coaching experience and specialization in a particular type of exercise.</p>`);
+    $('#rowOne').append(divTxt);
+
+    /* druga kolona */
+
+    var gymInfo = new Array (["Address", "17 Canal Street, New York, NY"], ["Tel","+1 123 456789"], ["Fax", "+1 123 456"], ["Email","support@vigorfit.com"]);
+
+    var divInfo = $("#rowTwoInfo");
+    $(divInfo).html("<h3>CONTACT</h3>");
+
+    for(let i=0; i<gymInfo.length; i++){
+      $(divInfo).append(`<p>${gymInfo[i][0]}: ${gymInfo[i][1]}</p>`);
+    }
+
+    var socialNet = ["facebook", "twitter", "youtube"];
+    for (network of socialNet){
+      $("#socials .social_icon").append(`<li><a href="https://www.${network}.com/"><i
+      class="fa fa-${network}"></i></a></li>`);
+    }
+    
+
+
+    
 
 
   }
@@ -409,29 +441,6 @@ window.onload = function () {
 
 
   }
-
-  /* funkcija za prikaz slajdova */
-
-
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000);
-  }
-
-
-
-
-
 
 
 }
