@@ -16,6 +16,10 @@
     .slide_text {
         margin-top: 150px;
     }
+
+    .slide_text > h1 {
+        font-size: 5rem;
+    }
 	.social_icon {
        margin-bottom: 30px;
     }
@@ -52,6 +56,11 @@
     margin: 142px -205px 0;
 }
 
+#formElements {
+    width:80%;
+    margin: 10px auto;
+} 
+
 }
 /* only small tablets */
  @media (min-width: 768px) and (max-width: 991px) {
@@ -71,6 +80,8 @@
      .top-header{
          position: relative;
     }
+
+    
      .lbox-details{
          display: block;
          position: relative;
@@ -102,16 +113,7 @@
         top: 12px;
         right: 15px; 
     }
-    .slide_text h3 strong {
-         font-size: 65px;
-         float: left;
-         width: 100%;
-         position: relative;
-         left: -3px;
-    } 
-    .slide_text h3 {
-         font-size: 42px;
-    }
+    
      .search-btn {
          background: #111;
     }
@@ -124,6 +126,11 @@
      .top-header .navbar .navbar-collapse ul li a:hover, .top-header .navbar .navbar-collapse ul li a:focus {
          color: #0892fd;
     }
+
+    .slide_text > h1 {
+        font-size: 3rem;
+    }
+    
      .slide_text p {
          display: none;
     }
@@ -131,7 +138,7 @@
          margin-top: 10px;
     }
      .slide_text {
-         margin-top: 60px;
+         margin-top: 120px;
     }
     #demo .img-responsive {
        width: 100%;
@@ -238,7 +245,16 @@
     .contact_form {
         padding: 45px 35px 65px;
         margin: 142px -175px 0;  
-    }     
+    }
+    
+    #formElements {
+        width:80%;
+        margin: 10px auto;
+    }
+    .half_bg_theme::after {
+        display: none;
+    }
+    
 
 }
 
@@ -246,6 +262,9 @@
     header #sidebarCollapse img {
         top: 40px;
         right: 0;
+    }
+    .half_bg_theme::after {
+        display: none;
     }
   
 }
@@ -476,6 +495,8 @@
          float: left;
          width: 100%;
     }
+
+    
      .heading_main p.large {
          display: none;
     }
@@ -599,6 +620,7 @@
 .contact_form {
     margin: 0;
 }
+
 .contact_section {
 
         background-size: 100% auto;
@@ -608,11 +630,12 @@
     #dugmeSalji {
         width: 100%;
     }
+    #formElements {
+        width:80%;
+        margin: 10px auto;
+    }
 	
-	#formElements {
-		width:80%;
-		margin: 0 auto;
-	}
+	
 
 }
  
