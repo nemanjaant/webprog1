@@ -125,27 +125,6 @@ button:focus {
 }
 
 
-
-
-
-.mySlides {display: none;}
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-
 .form-control::-moz-placeholder {
 	color: #ffffff;
 	opacity: 1;
@@ -204,11 +183,6 @@ a:hover,a:focus {
     margin-bottom: 0;
 }
 
-.text_align_right_img img {
-    position: relative;
-    right: 15px;
-    box-shadow: 0px 0 5px 0 rgba(0,0,0,.2);
-}
   /* ---------------------------------------------------
   CONTENT STYLE
 ----------------------------------------------------- */
@@ -397,10 +371,7 @@ a.join_bt {
     width: 100%;
 }
 
-.section {
-    float: left;
-    width: 100%;
-}
+
 
 .ulockd-home-slider {
     float: left;
@@ -488,9 +459,10 @@ a.navbar-brand {
     line-height: 55px;
     border: solid #00cc99 1px;
     font-size: 18px;
-    margin-top: 10px;
+    margin: 15px;
     background: #fff;
     font-weight: 500;
+
 }
 
 .main_bt:hover{
@@ -527,18 +499,19 @@ button#sidebarCollapse {
 	display: none;
 }
 
-.img-responsive {
-	max-width: 100%;
-}
 
-.slide_text h3 {
-    font-size: 100px;
+.slide_text > h1 {
+    font-size: 7rem;
     font-weight: 300;
     padding: 0;
     text-transform: uppercase;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
-.slide_text h3 strong {
+.slide_text h1 strong {
     font-weight: 900;
 }
 
@@ -574,52 +547,9 @@ button#sidebarCollapse {
 	color: #00cc99;
 }
 
-.contact_bt {
-    width: 180px;
-    height: 50px;
-    background: #f2184f;
-    color: #fff;
-    float: left;
-    line-height: 50px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 50px;
-    border-radius: 5px;
-}
-
-.contact_bt:hover,
-.contact_bt:focus {
-    color: #fff;
-}
-
-.dark_bg .contact_bt {
-    margin-top: 30px;
-}
-
 .slide_text {
     margin-top: 280px;
     padding-left: 0;
-}
-
-/*------------------------------------------------------------------ About -------------------------------------------------------------------*/
-
-.tooltip-1 {
-	display: inline-block;
-	position: relative;
-	color: #70c6eb;
-	opacity: 1;
-}
-
-.tooltip__wave {
-	width: 30%;
-	height: 20px;
-	position: absolute;
-	bottom: -10px;
-	left: 0;
-	right: 0px;
-	margin: 0 auto;
-	overflow: hidden;
 }
 
 
@@ -740,10 +670,26 @@ a.hvr-radial-out:focus {
 .service_pro_section {
 
     background: #0c9;
-    border-left: solid #fff 15px;
-    border-right: solid #fff 15px;
-    padding: 80px;
+    padding:15px;
+    
+   
+}
 
+
+.service_pro_section button {
+    
+    background-color: #FFF;
+    width: 15rem;
+    text-align: center;
+    border:none;
+    padding:10px;
+    margin:10px;
+
+    
+}
+
+.service_pro_section button:hover{
+    cursor:pointer;
 }
 
 .services_list {
@@ -760,23 +706,8 @@ a.hvr-radial-out:focus {
     color: #fff;
 }
 
-.services_list ul li img {
-    position: relative;
-    top: -2px;
-    width: 30px;
-    margin-right: 10px;
-}
-
-
 
 /*------------------------------------------------------------------ Contact -------------------------------------------------------------------*/
-
-.contact-box {
-	padding: 70px 0px;
-}
-
-
-
 
 .contact-block .form-group .form-control {
 	background: #333;
@@ -849,25 +780,6 @@ p {
 }
 
 
-.text_align_center {
-	text-align: center;
-}
-
-.text_align_right {
-	text-align: right;
-}
-
-.text_align_left_img img {
-    float: left;
-}
-
-.text_align_right_img img {
-    float: right;
-}
-
-.red_bg {
-	background: #e91327;
-}
 
 .white_fonts p,
 .white_fonts h1,
@@ -880,9 +792,7 @@ p {
 .white_fonts ul li,
 .white_fonts ul li a,
 .white_fonts ul i,
-.white_fonts .post_info i,
-.white_fonts div,
-.white_fonts a.read_more {
+.white_fonts div {
 	color: #fff !important;
 }
 
@@ -942,15 +852,6 @@ p {
 }
 
 
-
-.padding_0 {
-	padding: 0 !important;
-}
-
-.full {
-	float: left;
-	width: 100%;
-}
 
 .heading_main {
     float: left;
